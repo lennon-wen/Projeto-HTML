@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Olimpíada SENAI</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Olimpíada SENAI</h1>
+        <p>Garante sua vaga na maior competição tecnológica!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Página inicial</a>
+        <a href="sobre.html">Sobre a Empresa</a>
+    </nav>
+
+    <main>
+        <section id="formulario">
+            <h2>Formulário de Inscrição</h2>
+            <p>Preencha os dados abaixo para inscrever sua equipe nas provas.</p>
+
+            <form method="post">
+                <div class="campo">
+                    <label for="nome">Nome Completo do Líder:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail Institucional:</label>
+                    <input type="email" id="email" name="email" required placeholder="aluno@senai.br">
+                </div>
+
+                <div class="campo">
+                    <label for="turma">Turma / RM:</label>
+                    <input type="text" id="turma" name="turma" required placeholder="Ex: 1º DS Manhã">
+                </div>
+
+                <div class="campo">
+                    <label for="modalidade">Escolha a Modalidade:</label>
+                    <select id="modalidade" name="modalidade" required>
+                        <option value="">Selecione um curso...</option>
+                        <option value="sistemas">Desenvolvimento de Sistemas</option>
+                        <option value="mecatronica">Mecatrônica</option>
+                        <option value="automacao">Automação Industrial</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="equipe">Nome da Equipe:</label>
+                    <input type="text" id="equipe" name="equipe" required placeholder="Digite o nome da equipe">
+                </div>
+
+                <button type="submit" class="botao-enviar">Realizar Inscrição</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Olimpíada SENAI - Projeto de Divulgação de Eventos</p>
+    </footer>
+
+</body>
+
+</html>

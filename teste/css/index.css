@@ -1,0 +1,334 @@
+:root {
+    --fundo-principal: #EAF2F7;
+    --fundo-cards: #FFFFFF;
+    --destaque-suave: #C8DCE9;                                                    
+    --detalhe-verde: #BFD5CC;
+    --botoes-principais: #547487;
+    --textos-titulos: #293F50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fundo-principal);
+    color: var(--textos-titulos);
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: var(--fundo-cards);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(41, 63, 80, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--textos-titulos);
+}
+
+.logo span {
+    color: var(--botoes-principais);
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: var(--textos-titulos);
+    font-weight: 500;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.menu-principal a:hover {
+    color: var(--botoes-principais);
+}
+
+.btn-primario {
+    background-color: var(--botoes-principais);
+    color: #FFFFFF;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primario:hover {
+    background-color: var(--textos-titulos);
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--fundo-cards);
+    border: 2px solid var(--fundo-cards);
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-secundario:hover {
+    background-color: var(--fundo-cards);
+    color: var(--textos-titulos);
+}
+
+.hero-banner {
+    background-color: #293F50; 
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 50px; 
+    margin: 80px auto; 
+    max-width: 97%; 
+}
+
+.hero-banner h1, 
+.hero-banner p {
+    color: #FFFFFF;
+}
+
+.hero-conteudo h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.hero-conteudo p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: var(--destaque-suave);
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.cabecalho-secao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cabecalho-secao h2 {
+    font-size: 2.2rem;
+    color: var(--textos-titulos);
+}
+
+.cabecalho-secao p {
+    color: var(--botoes-principais);
+    font-size: 1.1rem;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--fundo-cards);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(41, 63, 80, 0.15);
+}
+
+.card-imagem {
+    height: 200px;
+    background-color: var(--destaque-suave);
+    position: relative;
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--detalhe-verde);
+    color: var(--textos-titulos);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.card-conteudo {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-conteudo h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card-conteudo p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.link-card {
+    text-decoration: none;
+    color: var(--botoes-principais);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.link-card:hover {
+    color: var(--textos-titulos);
+}
+
+footer {
+    background-color: var(--textos-titulos);
+    color: var(--destaque-suave);
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.rodape-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--fundo-cards);
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero-conteudo h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* CONSEGUI AJUSTAR AS IMAGENS DAS MODALIDADES - IGOR SUSAE */
+
+.card-imagem {
+    height: 220px; 
+    position: relative;
+    overflow: hidden; 
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.timeline-content, .faq-item {
+    background-color: var(--fundo-cards);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.timeline, .faq-lista {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/*  CRONOGRAMA (TIMELINE) */
+.timeline {
+    position: relative;
+    padding: 10px 0;
+}
+
+.timeline::before { 
+    content: '';
+    position: absolute;
+    left: 20px; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--destaque-suave);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 25px;
+}
+
+.timeline-dot { 
+    display: none;
+    left: 12px; top: 15px;
+    width: 20px; height: 20px;
+    background: var(--botoes-principais);
+    border-radius: 50%;
+    border: 4px solid var(--fundo-principal);
+}
+
+.timeline-content { padding: 20px; }
+.timeline-content:hover { transform: translateY(-3px); }
+.timeline-content h3 { margin: 0 0 5px; font-size: 1.3rem; }
+.timeline-content .data { color: var(--botoes-principais); font-weight: bold; margin-bottom: 10px; display: block;}
+.timeline-content p { margin: 0; }
+
+/* DÚVIDAS FREQUENTES (FAQ) */
+.faq-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item summary {
+    padding: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; } /* Remove seta no Chrome antigo */
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--botoes-principais);
+}
+
+.faq-item[open] summary::after { content: '-'; }
+
+.faq-resposta {
+    padding: 0 20px 20px;
+    border-top: 1px solid var(--fundo-principal);
+    margin-top: 5px;
+    padding-top: 15px;
+}
